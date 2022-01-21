@@ -62,6 +62,13 @@ switch (APP) {
   case 'prowlarr';
     define('TRANSLATE_ROOT', PROWLARR_FRONTEND_ROOT);
     define('EXISTING_LANGUAGE_ROOT', PROWLARR_LANGUAGE_ROOT);
+  
+    $ignoreFiles = array(
+      'App', //-- app title
+      'SignalRConnector',
+      'colors', //-- color codes
+      'Peers', //-- title={`${getPeersTooltipPart(seeders, 'seeder')}, ${getPeersTooltipPart(leechers, 'leecher')}`} 
+    );
     break;
   case 'radarr';
     define('TRANSLATE_ROOT', RADARR_FRONTEND_ROOT);
